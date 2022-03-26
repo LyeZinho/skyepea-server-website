@@ -13,6 +13,7 @@ skyrouterdat.get('/img/:imgsrc', function(req, res){
 skyrouterdat.get('/respack/:ressrc', function(req, res){
     const file = `${__dirname}/respack/${req.params.ressrc}`;
     res.download(file);
+    res.sendStatus(200)
 });
 
 // Rotas para receber requests API
