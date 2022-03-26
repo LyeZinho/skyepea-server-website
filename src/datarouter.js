@@ -1,6 +1,8 @@
 const express = require('express');
 const skyrouterdat = express.Router();
-const path = require('path');
+var path = require('path');
+var mime = require('mime');
+var fs = require('fs');
 
 
 // Rotas para entrega de dados
@@ -9,7 +11,8 @@ skyrouterdat.get('/img/:imgsrc', function(req, res){
 });
 
 skyrouterdat.get('/respack/:ressrc', function(req, res){
-    res.sendFile(path.join(__dirname, '/respack/' + req.params.imgsrc));
+    const file = `${__dirname}/respack/${req.params.ressrc}`;
+    res.download(file);
 });
 
 // Rotas para receber requests API
