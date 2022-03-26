@@ -9,7 +9,7 @@ skyrouterdat.get('/img/:imgsrc', function(req, res){
 });
 
 skyrouterdat.get('/respack/:ressrc', function(req, res){
-    res.sendFile(path.join(__dirname, '/img/' + req.params.imgsrc));
+    res.sendFile(path.join(__dirname, '/respack/' + req.params.imgsrc));
 });
 
 // Rotas para receber requests API
