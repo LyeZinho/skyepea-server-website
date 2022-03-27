@@ -10,6 +10,10 @@ skyrouterdat.get('/img/:imgsrc', function(req, res){
     res.sendFile(path.join(__dirname, '/img/' + req.params.imgsrc));
 });
 
+skyrouterdat.get('/homecss/:stlycss', function(req, res){
+    res.sendFile(path.join(__dirname, '/homepage/css/' + req.params.stlycss));
+});
+
 skyrouterdat.get('/respack/:ressrc', function(req, res){
     const file = `${__dirname}/respack/${req.params.ressrc}`;
     res.download(file);

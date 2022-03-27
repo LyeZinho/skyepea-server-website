@@ -7,7 +7,7 @@ const path = require('path');
 // Rotas para entrega HTML
 
 skyrouter.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, '/home.html'));
+    res.sendFile(path.join(__dirname, '/homepage/home.html'));
 });
 
 
